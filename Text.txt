@@ -1,0 +1,26 @@
+Phân tính và gọi tên website the band
+    1.Header
+    2.Slider
+    3.Content
+        3.1 About
+        3.2 Tour
+        3.3 Contact
+        3.4 Image
+        3.5 Footer
+    4.Footer
+
+    One Page
+
+
+
+
+
+Những thành phần thường gặp trên giao diện website
+    1. Header
+    2. Navigation (Điều hướng)
+    3. Breadcrumb
+    4. Sidebar
+    5. Slider
+    6. Banner
+    7. Content (Nội dung chính)
+    8. Footer (Chân trang)
