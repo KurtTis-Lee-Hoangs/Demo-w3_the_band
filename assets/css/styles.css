@@ -74,6 +74,7 @@ html {
     background-color: #000000;
     text-decoration: none;
     border: none;
+    text-align: center;
 }
 
 .btn:hover {
@@ -155,6 +156,14 @@ html {
     font-size: 10px;
 }
 
+#header .mobile-menu-btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header .mobile-menu-btn,
 #header .search-btn {
     float: right;
     padding: 0 21px;
@@ -165,6 +174,15 @@ html {
     cursor: pointer;
 }
 
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000000;
+}
+
+#header .menu-icon,
 #header .search-icon {
     color: #FFFFFF;
     font-size: 20px;
@@ -215,6 +233,7 @@ html {
 #content .content-section {
     padding: 64px 16px;
     width: 768px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -242,7 +261,7 @@ html {
 
 #content .members-list {
     padding-top: 32px;
-    padding-bottom: 32px;
+    /* padding-bottom: 32px; */
 }
 
 #content .member-name {
@@ -303,7 +322,7 @@ html {
 
 .places-list {
     padding: 0 0 32px;
-    margin-top: 32px;
+    margin-top: 16px;
     margin-bottom: 0;
 }
 
@@ -368,7 +387,6 @@ html {
 }
 
 .contact-form .form-submit-btn {
-    margin-right: 8px;
     padding: 8px 16px;
     float: right;
     color: #FFFFFF;

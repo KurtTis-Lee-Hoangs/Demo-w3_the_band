@@ -6,6 +6,7 @@
     <title>The band</title>
     <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -55,6 +56,10 @@
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
             <!-- End: Search button -->
         </div>
 
@@ -75,17 +80,17 @@
                 </p>
 
                 <div class="row members-list">
-                    <div class="col col-third text-center">
+                    <div class="member-item col col-third text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/band/bandmember.jpg" alt="Name" class="member-img">
                     </div>
 
-                    <div class="col col-third text-center">
+                    <div class="member-item col col-third text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/band/bandmember.jpg" alt="Name" class="member-img">
                     </div>
  
-                    <div class="col col-third text-center">
+                    <div class="member-item col col-third text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/band/bandmember.jpg" alt="Name" class="member-img">
                     </div>
@@ -117,33 +122,33 @@
 
                     <!-- Place -->
                     <div class="row places-list">
-                        <div class="col col-third place-item">
+                        <div class="col col-third s-col-full mt-16 place-item">
                             <img src="./assets/img/place/newyork.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="btn js-buy-ticket">Buy Tickets</button>
+                                <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
 
-                        <div class="col col-third place-item">
+                        <div class="col col-third s-col-full mt-16 place-item">
                             <img src="./assets/img/place/paris.jpg" alt="Paris" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="btn js-buy-ticket">Buy Tickets</button>
+                                <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
 
-                        <div class="col col-third place-item">
+                        <div class="col col-third s-col-full mt-16 place-item">
                             <img src="./assets/img/place/sanfran.jpg" alt="San Francisco" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="btn js-buy-ticket">Buy Tickets</button>
+                                <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                     </div>
@@ -156,7 +161,7 @@
                 <p class="section-sub-heading">Fan? Drop a note!</p> 
                 
                 <div class="row contact-content">
-                    <div class="col col-half contact-info">
+                    <div class="col col-half s-col-full contact-info">
                         <p>
                             <i class="ti-location-pin"></i>
                             Chicago, US
@@ -164,23 +169,23 @@
 
                         <p>
                             <i class="ti-mobile"></i>
-                            Phone: +00 151515
+                            Phone: <a style="text-decoration: none; color: #000;" href="tel:+00 151515">+84 367363735</a>
                         </p>
 
                         <p>
                             <i class="ti-email"></i>
-                            Email: mail@mail.com
+                            Email: <a style="text-decoration: none; color: #000;" href="mailto:minhhoangle031211@gmail.com">minhhoangle031211@gmail.com</a> 
                         </p>
                     </div>
 
-                    <div class="col col-half contact-form">
+                    <div class="col col-half s-col-full contact-form">
                         <form action="">
                             <div class="row">
-                                <div class="col col-half">
+                                <div class="col col-half s-col-full">
                                     <input type="text" name="" placeholder="Name" required id="" class="form-control">
                                 </div>
 
-                                <div class="col col-half">
+                                <div class="col col-half s-col-full s-mt-8">
                                     <input type="email" name="" placeholder="Email" required id="" class="form-control">
                                 </div>
                             </div>
@@ -188,9 +193,9 @@
                             <div class="row mt-8">
                                 <div class="col col-full">
                                     <input type="text" name="" placeholder="Message" required id="" class="form-control">
+                                </div>
                             </div>
-
-                            <input class="form-submit-btn mt-16" type="submit" value="SEND">
+                            <input class="form-submit-btn mt-16 s-full-width" type="submit" value="SEND">
                         </form>
                     </div>
                 </div>
@@ -281,6 +286,7 @@
         </div>
     </div>
 
+    <!-- Modal pay -->
     <script>
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
 
@@ -316,6 +322,39 @@
         modalContainer.addEventListener('click', function(event) {
                 event.stopPropagation()
         })
+    </script>
+
+    <!-- Mobile menu -->
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+        // Open/Close Mobile menu
+        mobileMenu.onclick = function() {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed) {
+                header.style.height = 'auto';
+            }
+            else {
+                header.style.height = null;
+            }
+        }
+
+        // Close menu when click 
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            
+            menuItem.onclick = function(Event) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParentMenu) {
+                    event.preventDefault();
+                } else {
+                    header.style.height = null;
+                }
+            }
+        }
     </script>
 </body>
 </html>
